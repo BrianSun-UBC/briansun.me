@@ -157,45 +157,6 @@ a {
 .hero {
   text-align: center;
 }
-.portrait-wrap {
-  position: relative;
-  display: inline-block;
-  animation: rise 0.55s ease both;
-}
-.portrait {
-  width: 84px;
-  height: 84px;
-  border-radius: 22px;
-  object-fit: cover;
-  border: 1px solid #294167;
-  box-shadow: 0 18px 46px rgb(0 0 0 / 30%);
-  animation: rise 0.55s ease both;
-}
-.availability-dot {
-  position: absolute;
-  right: -3px;
-  bottom: 7px;
-  width: 15px;
-  height: 15px;
-  border: 3px solid var(--background);
-  border-radius: 999px;
-  background: #50cf8b;
-  box-shadow: 0 0 0 3px rgb(80 207 139 / 10%);
-}
-.eyebrow {
-  margin: 19px 0 8px;
-  color: #6f94cd;
-  font: 600 11px/1.5 var(--font-geist-mono);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  animation: rise 0.55s 0.06s ease both;
-}
-.eyebrow svg {
-  display: inline;
-  width: 12px;
-  height: 12px;
-  margin: 0 3px -2px 0;
-}
 h1 {
   margin: 0;
   font-size: clamp(2.35rem, 7vw, 3.25rem);
@@ -300,14 +261,7 @@ h1 {
   scroll-margin-top: 30px;
 }
 .section-kicker {
-  display: flex;
-  align-items: center;
-  gap: 11px;
   margin-bottom: 26px;
-}
-.section-kicker span {
-  color: #4f8cff;
-  font: 600 11px/1 var(--font-geist-mono);
 }
 .section-kicker h2 {
   margin: 0;
@@ -565,17 +519,13 @@ a.project-card:focus-visible {
 .project-topline {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-bottom: 24px;
   color: #5877a7;
 }
 .project-topline svg {
   width: 17px;
   height: 17px;
-}
-.project-number {
-  font: 600 10px/1 var(--font-geist-mono);
-  letter-spacing: 0.08em;
 }
 .card-eyebrow {
   margin: 0 0 7px;
@@ -961,11 +911,6 @@ footer div a:focus-visible {
 }
 
 @media (max-width: 520px) {
-  .portrait {
-    width: 72px;
-    height: 72px;
-    border-radius: 19px;
-  }
   .hero-role {
     font-size: 17px;
     line-height: 1.35;

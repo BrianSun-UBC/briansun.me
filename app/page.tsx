@@ -3,17 +3,30 @@ import {
   BookOpen,
   BriefcaseBusiness,
   Code2,
-  Contact,
   FileText,
-  GitBranch,
   GraduationCap,
   Mail,
-  MapPin,
   Sparkles,
 } from 'lucide-react';
 import Image from 'next/image';
 
 import { ContactComposer } from '@/components/contact-composer';
+
+function LinkedInIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13Zm1.78 13.02H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+    </svg>
+  );
+}
+
+function GitHubIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 16 16" fill="currentColor" {...props}>
+      <path d="M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.63 5.47 7.71.4.08.55-.18.55-.39 0-.2-.01-.84-.01-1.52-2.01.38-2.53-.5-2.69-.96-.09-.23-.48-.96-.82-1.15-.28-.16-.68-.56-.01-.57.63-.01 1.08.59 1.23.83.72 1.23 1.87.88 2.33.67.07-.53.28-.88.51-1.08-1.78-.2-3.64-.9-3.64-4.01 0-.89.31-1.62.82-2.19-.08-.2-.36-1.04.08-2.16 0 0 .67-.22 2.2.84A7.5 7.5 0 0 1 8 3.88c.68 0 1.36.09 2 .27 1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.96.08 2.16.51.57.82 1.3.82 2.19 0 3.12-1.87 3.81-3.65 4.01.29.25.54.74.54 1.5 0 1.08-.01 1.95-.01 2.22 0 .22.15.47.55.39A8.13 8.13 0 0 0 16 8.13C16 3.64 12.42 0 8 0Z" />
+    </svg>
+  );
+}
 
 type Experience = {
   company: string;
@@ -35,7 +48,7 @@ const socialLinks = [
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/brian--sun/',
-    icon: Contact,
+    icon: LinkedInIcon,
   },
   {
     label: 'Resume',
@@ -46,7 +59,7 @@ const socialLinks = [
   {
     label: 'GitHub',
     href: 'https://github.com/BrianSun-UBC',
-    icon: GitBranch,
+    icon: GitHubIcon,
   },
 ];
 
@@ -60,7 +73,7 @@ const experiences: Experience[] = [
     bullets: [
       'Own end-to-end delivery for Azure AI, Enterprise Copilot, Fabric, and GitHub Copilot, translating ambiguous enterprise workflows into scoped solutions, clear architecture, and rollout plans from discovery through production adoption.',
       'Write and review production-grade Python and JavaScript for full-stack AI prototypes, microservices, integrations, and LLM evaluation harnesses; hardening successful pilots for production shortened sales cycles by 27% and increased deal closure rates by 33%.',
-      'Own production quality through tracing, evaluations, monitoring, metrics, and failure-mode analysis—balancing reliability, safety, latency, and cost to accelerate launches by 35% and sustain 99.2% uptime.',
+      'Own production quality through tracing, evaluations, monitoring, metrics, and failure-mode analysis—balancing reliability, safety, latency, and cost to accelerate launches by 35% and sustain 99.9% uptime.',
       'Partner across sales, engineering, product, security, and executive teams; lead 12 cross-functional solution engineers while contributing to 98% positive customer ratings and 85% contract renewal rates.',
       'Turn field problems into reusable architecture, playbooks, and workshops that reduce time-to-value by 40%; ranked in Microsoft’s top 10% across a $40M+ portfolio and exceeded personal KPIs by 180%.',
     ],
@@ -233,16 +246,9 @@ const articles = [
   },
 ];
 
-function SectionTitle({
-  number,
-  children,
-}: {
-  number: string;
-  children: React.ReactNode;
-}) {
+function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
     <div className="section-kicker">
-      <span>{number}</span>
       <h2>{children}</h2>
     </div>
   );
@@ -341,25 +347,6 @@ export default function Home() {
 
       <div className="content" id="top">
         <header className="hero">
-          <div className="portrait-wrap">
-            <Image
-              className="portrait"
-              src="/brian-sun.jpg"
-              alt="Brian Sun"
-              width={88}
-              height={88}
-              priority
-              unoptimized
-            />
-            <span
-              className="availability-dot"
-              aria-label="Open to conversations"
-            />
-          </div>
-          <p className="eyebrow">
-            <MapPin aria-hidden="true" /> Vancouver, Canada · Building at the
-            edge of AI and enterprise
-          </p>
           <h1>Brian Sun</h1>
           <p className="hero-role">
             Staff Solutions Engineer — Cloud &amp; AI at Microsoft
@@ -412,7 +399,7 @@ export default function Home() {
               <span>monthly users</span>
             </div>
             <div>
-              <strong>99.2%</strong>
+              <strong>99.9%</strong>
               <span>uptime sustained</span>
             </div>
           </div>
@@ -421,7 +408,7 @@ export default function Home() {
         <div className="soft-divider" />
 
         <section className="section" id="experience">
-          <SectionTitle number="01">Experience</SectionTitle>
+          <SectionTitle>Experience</SectionTitle>
           <div className="experience-list">
             {experiences.map((experience) => (
               <ExperienceCard
@@ -444,7 +431,7 @@ export default function Home() {
         <div className="soft-divider" />
 
         <section className="section" id="education">
-          <SectionTitle number="02">Education &amp; toolkit</SectionTitle>
+          <SectionTitle>Education &amp; Skills</SectionTitle>
           <article className="education-card">
             <div className="school-mark">
               <Image
@@ -485,13 +472,12 @@ export default function Home() {
         <div className="soft-divider" />
 
         <section className="section" id="projects">
-          <SectionTitle number="03">Selected projects</SectionTitle>
+          <SectionTitle>Projects</SectionTitle>
           <div className="project-grid">
-            {projects.map((project, index) => {
+            {projects.map((project) => {
               const card = (
                 <>
                   <div className="project-topline">
-                    <span className="project-number">0{index + 1}</span>
                     {project.href ? (
                       <ArrowUpRight aria-hidden="true" />
                     ) : (
@@ -539,7 +525,7 @@ export default function Home() {
         <div className="soft-divider" />
 
         <section className="section" id="writing">
-          <SectionTitle number="04">Technical writing</SectionTitle>
+          <SectionTitle>Writing</SectionTitle>
           <p className="section-intro">
             Build notes from shipped side projects—focused on the architecture,
             tradeoffs, and edges that matter once an idea meets a real workflow.
@@ -567,12 +553,14 @@ export default function Home() {
         <div className="soft-divider" />
 
         <section className="contact-card" id="contact">
-          <p className="card-eyebrow">Have an ambitious problem?</p>
-          <h2>Let&apos;s turn ambiguity into something that ships.</h2>
+          <p className="card-eyebrow">
+            Feel free to reach out and send me a message
+          </p>
+          <h2>Let&apos;s connect</h2>
           <p>
-            I&apos;m always happy to compare notes on enterprise AI,
-            forward-deployed engineering, product architecture, and the work of
-            moving prototypes into production.
+            I&apos;m always happy to connect with other like-minded
+            professionals across AI, technology, and entrepreneurship. Open to
+            exploring other opportunities in the AI space, startups or big tech.
           </p>
           <ContactComposer />
         </section>
