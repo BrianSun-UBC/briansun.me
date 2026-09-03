@@ -484,7 +484,7 @@ export default function Home() {
           <div className="impact-strip" aria-label="Career highlights">
             <div>
               <strong>6+</strong>
-              <span>years shipping</span>
+              <span>years experience</span>
             </div>
             <div>
               <strong>$40M+</strong>
