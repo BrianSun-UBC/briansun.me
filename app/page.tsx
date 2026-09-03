@@ -92,10 +92,10 @@ const experiences: Experience[] = [
     mark: 'microsoft',
     bullets: [
       <>
-        Own <strong>end-to-end delivery</strong> for Azure AI, Enterprise
-        Copilot, Fabric &amp; GitHub Copilot, translating ambiguous enterprise
-        workflows into scoped solutions, clear architecture, and rollout plans
-        from discovery through production adoption
+        Own <strong>end-to-end delivery</strong> for Azure, Copilot, Foundry,
+        Fabric &amp; GitHub products, translating ambiguous enterprise workflows
+        into scoped solutions, clear architecture, and rollout plans from
+        discovery through production adoption
       </>,
       <>
         Personally <strong>write and review production-grade code</strong> for
@@ -141,10 +141,31 @@ const experiences: Experience[] = [
       height: 200,
     },
     bullets: [
-      'Led discovery with 70+ monthly prospects, turning payment challenges into Python-based prototypes and tailored workflows that increased conversion by 60% and reduced sales cycles from 120 to 75 days.',
-      'Built Python and API integration workflows that automated troubleshooting, halving post-sales implementation time and reducing support tickets by 40%.',
-      'Turned recurring customer needs into reusable virtual labs and interactive demo environments used by 400+ prospects, accelerating time-to-value by 30% and contributing to 30% pipeline growth.',
-      'Promoted to Lead in eight months after driving $5M in year-over-year growth and exceeding KPIs by 220%; led four Solutions Engineers across three verticals and signed partnerships with Sage, Webull, and Mastercard.',
+      <>
+        Led discovery with 70+ monthly prospects, turning payment challenges
+        into Python-based prototypes and tailored workflows that{' '}
+        <strong>increased conversion by 60%</strong> and{' '}
+        <strong>reduced sales cycles from 120 to 75 days</strong>.
+      </>,
+      <>
+        Built Python and API integration workflows that automated
+        troubleshooting, resolved technical objections and improved
+        implementation, <strong>halving post-sales implementation time</strong>{' '}
+        and <strong>reducing support tickets by 40%</strong>.
+      </>,
+      <>
+        Turned recurring customer needs into reusable virtual labs and
+        interactive demo environments used by 400+ prospects, accelerating{' '}
+        <strong>time-to-value by 30%</strong> and{' '}
+        <strong>contributing to 30% pipeline growth</strong>.
+      </>,
+      <>
+        Promoted to Lead in eight months after driving{' '}
+        <strong>$5M in year-over-year growth</strong> and{' '}
+        <strong>exceeding KPIs by 220%</strong>; led four Solutions Engineers
+        across three verticals and signed partnerships with{' '}
+        <strong>Sage, Webull, and Mastercard</strong>.
+      </>,
     ],
   },
   {
@@ -160,9 +181,33 @@ const experiences: Experience[] = [
       height: 200,
     },
     bullets: [
-      'Co-founded and built a Python-based product and analytics platform for 200+ ecommerce clients, owning product strategy, system architecture, and production delivery from zero to scale.',
-      'Developed product-recommendation, ad-spend-optimization, and product-research solutions that increased revenue by 85%, deal sizes by 60%, retention by 50%, and engagement by 300%.',
-      'Led and mentored an offshore engineering team while scaling annual recurring revenue past $2M at 170% year-over-year growth; the company and platform were ultimately acquired by a leading ecommerce competitor.',
+      <>
+        Co-founded and built a{' '}
+        <strong>Python-based product and analytics platform</strong> for 200+
+        ecommerce clients, owning{' '}
+        <strong>
+          product strategy, system architecture, and production delivery
+        </strong>{' '}
+        from zero to scale.
+      </>,
+      <>
+        Developed{' '}
+        <strong>
+          product-recommendation, ad-spend-optimization, and product-research
+          solutions
+        </strong>{' '}
+        that increased <strong>revenue by 85%</strong>,{' '}
+        <strong>deal sizes by 60%</strong>, <strong>retention by 50%</strong>,
+        and <strong>engagement by 300%</strong>.
+      </>,
+      <>
+        Led and mentored an offshore engineering team while scaling{' '}
+        <strong>
+          annual recurring revenue past $2M at 170% year-over-year growth
+        </strong>
+        ; the company and platform were ultimately acquired by a leading
+        ecommerce competitor.
+      </>,
     ],
   },
 ];
