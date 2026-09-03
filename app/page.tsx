@@ -61,7 +61,7 @@ type Experience = {
     width: number;
     height: number;
   };
-  bullets?: string[];
+  bullets?: React.ReactNode[];
 };
 
 const socialLinks = [
@@ -91,11 +91,41 @@ const experiences: Experience[] = [
     period: 'Feb 2024 — Present',
     mark: 'microsoft',
     bullets: [
-      'Own end-to-end delivery for Azure AI, Enterprise Copilot, Fabric, and GitHub Copilot, translating ambiguous enterprise workflows into scoped solutions, clear architecture, and rollout plans from discovery through production adoption.',
-      'Write and review production-grade Python and JavaScript for full-stack AI prototypes, microservices, integrations, and LLM evaluation harnesses; hardening successful pilots for production shortened sales cycles by 27% and increased deal closure rates by 33%.',
-      'Own production quality through tracing, evaluations, monitoring, metrics, and failure-mode analysis—balancing reliability, safety, latency, and cost to accelerate launches by 35% and sustain 99.9% uptime.',
-      'Partner across sales, engineering, product, security, and executive teams; lead 12 cross-functional solution engineers while contributing to 98% positive customer ratings and 85% contract renewal rates.',
-      'Turn field problems into reusable architecture, playbooks, and workshops that reduce time-to-value by 40%; ranked in Microsoft’s top 10% across a $40M+ portfolio and exceeded personal KPIs by 180%.',
+      <>
+        Own <strong>end-to-end delivery</strong> for Azure AI, Enterprise
+        Copilot, Fabric &amp; GitHub Copilot, translating ambiguous enterprise
+        workflows into scoped solutions, clear architecture, and rollout plans
+        from discovery through production adoption
+      </>,
+      <>
+        Personally <strong>write and review production-grade code</strong> for
+        full-stack AI prototypes, microservices, evaluation harness and
+        integrations; debug agent and workflow failures and harden successful
+        pilots for production, shortening <strong>sales cycles by 27%</strong>{' '}
+        and <strong>increasing deal closure rates by 33%</strong>
+      </>,
+      <>
+        <strong>Own production quality</strong> through tracing, evals,
+        monitoring, production metrics and failure-mode analysis; balance
+        reliability, safety, latency and cost to{' '}
+        <strong>accelerate launches by 35%</strong> and{' '}
+        <strong>sustain 99.9% uptime</strong> across environments
+      </>,
+      <>
+        Partner across sales, engineering, product, security and customer
+        success teams to communicate technical tradeoffs, delivery blockers and
+        guide production rollouts;{' '}
+        <strong>Lead a team of 12 solution engineers</strong>, contributing to{' '}
+        <strong>SMB and Enterprise deal growth of 24%</strong> and{' '}
+        <strong>98% positive customer feedback</strong>
+      </>,
+      <>
+        Codify field problems into reusable architecture, playbooks, and
+        workshops that <strong>reduce customer time-to-value by 40%</strong>;{' '}
+        <strong>ranked in the top 10%</strong> across a{' '}
+        <strong>$40M+ portfolio</strong> and{' '}
+        <strong>exceeded personal KPIs by 180%</strong>
+      </>,
     ],
   },
   {
@@ -142,6 +172,7 @@ const internships: Experience[] = [
     company: 'University of British Columbia',
     location: 'Vancouver, BC',
     role: 'Research Assistant',
+    period: 'Jan 2017 — Jan 2019',
     logo: {
       src: '/ubc-logo.png',
       alt: 'University of British Columbia',
@@ -307,8 +338,8 @@ function ExperienceCard({ experience }: { experience: Experience }) {
         </div>
         {experience.bullets?.length ? (
           <ul>
-            {experience.bullets.map((bullet) => (
-              <li key={bullet}>{bullet}</li>
+            {experience.bullets.map((bullet, index) => (
+              <li key={`${experience.company}-${index}`}>{bullet}</li>
             ))}
           </ul>
         ) : null}
