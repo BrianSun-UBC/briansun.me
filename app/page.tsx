@@ -142,29 +142,29 @@ const experiences: Experience[] = [
     },
     bullets: [
       <>
-        Led discovery with 70+ monthly prospects, turning payment challenges
-        into Python-based prototypes and tailored workflows that{' '}
-        <strong>increased conversion by 60%</strong> and{' '}
+        Led discovery with 70+ monthly prospects, translating payment challenges
+        into prototypes and tailored workflows;{' '}
+        <strong>increased conversion rate by 60%</strong> and{' '}
         <strong>reduced sales cycles from 120 to 75 days</strong>.
       </>,
       <>
         Built Python and API integration workflows that automated
-        troubleshooting, resolved technical objections and improved
+        troubleshooting; resolved technical objections and improved
         implementation, <strong>halving post-sales implementation time</strong>{' '}
         and <strong>reducing support tickets by 40%</strong>.
       </>,
       <>
-        Turned recurring customer needs into reusable virtual labs and
-        interactive demo environments used by 400+ prospects, accelerating{' '}
+        Turned recurring customer needs into reusable Virtual Labs and
+        Interactive Sandbox Environments used by 400+ prospects, accelerating{' '}
         <strong>time-to-value by 30%</strong> and{' '}
         <strong>contributing to 30% pipeline growth</strong>.
       </>,
       <>
-        Promoted to Lead in eight months after driving{' '}
-        <strong>$5M in year-over-year growth</strong> and{' '}
-        <strong>exceeding KPIs by 220%</strong>; led four Solutions Engineers
-        across three verticals and signed partnerships with{' '}
-        <strong>Sage, Webull, and Mastercard</strong>.
+        Promoted to Lead in 8 months after driving{' '}
+        <strong>$5M YoY growth</strong> and{' '}
+        <strong>exceeding KPIs by 220%</strong>; Led 4 Solutions Engineers
+        across three verticals and signed enterprise partnerships with{' '}
+        <strong>Sage, WeBull and Mastercard</strong>.
       </>,
     ],
   },
@@ -183,30 +183,28 @@ const experiences: Experience[] = [
     bullets: [
       <>
         Co-founded and built a{' '}
-        <strong>Python-based product and analytics platform</strong> for 200+
+        <strong>full-stack product and analytics platform</strong> for 200+
         ecommerce clients, owning{' '}
         <strong>
-          product strategy, system architecture, and production delivery
+          product strategy, system architecture and production delivery
         </strong>{' '}
         from zero to scale.
       </>,
       <>
         Developed{' '}
         <strong>
-          product-recommendation, ad-spend-optimization, and product-research
+          product recommendation, ad-spend optimization, product-research
           solutions
         </strong>{' '}
-        that increased <strong>revenue by 85%</strong>,{' '}
-        <strong>deal sizes by 60%</strong>, <strong>retention by 50%</strong>,
-        and <strong>engagement by 300%</strong>.
+        that increased <strong>revenue 85%</strong>,{' '}
+        <strong>deal sizes 60%</strong>, <strong>retention 50%</strong> and{' '}
+        <strong>engagement 300%</strong>.
       </>,
       <>
-        Led and mentored an offshore engineering team while scaling{' '}
-        <strong>
-          annual recurring revenue past $2M at 170% year-over-year growth
-        </strong>
-        ; the company and platform were ultimately acquired by a leading
-        ecommerce competitor.
+        Led and mentored offshore engineering team while scaling{' '}
+        <strong>ARR past $2M at 170% YoY growth</strong>; the company and
+        platform was ultimately acquired in a sale to a leading competitor in
+        the ecommerce space.
       </>,
     ],
   },
@@ -230,35 +228,39 @@ const internships: Experience[] = [
 
 const skillGroups = [
   {
-    title: 'Agentic & generative AI',
+    title: 'Agentic AI & Generative AI',
     skills: [
-      'Multi-agent systems',
-      'LangChain / LangGraph',
+      'Multi-Agent Systems',
+      'LangChain/Graph',
       'AutoGen',
       'Semantic Kernel',
-      'Prompt engineering',
+      'Prompt Engineering',
     ],
   },
   {
-    title: 'AI & product engineering',
+    title: 'AI Engineering',
     skills: [
       'Python',
+      'Javascript',
       'RAG',
       'Embeddings',
-      'Vector databases',
+      'Vector Databases',
       'APIs',
+      'SQL',
       'GraphQL',
       'Postgres',
       'Microservices',
     ],
   },
   {
-    title: 'Cloud, security & operations',
+    title: 'Cloud, Security & Operations',
     skills: [
       'Azure',
       'AWS',
       'GCP',
+      'AKS',
       'CI/CD',
+      'Deployment',
       'Evaluation',
       'Monitoring',
       'Security',
@@ -266,12 +268,12 @@ const skillGroups = [
     ],
   },
   {
-    title: 'Forward-deployed leadership',
+    title: 'Forward-Deployed Leadership',
     skills: [
-      'Technical discovery',
-      'Rapid prototyping',
-      'Enterprise integrations',
-      'Stakeholder alignment',
+      'Technical Discovery',
+      'Rapid Prototyping',
+      'Enterprise Integrations',
+      'Stakeholder Alignment',
     ],
   },
 ];
