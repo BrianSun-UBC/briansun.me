@@ -13,6 +13,8 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 
+import { ContactComposer } from '@/components/contact-composer';
+
 type Experience = {
   company: string;
   location: string;
@@ -45,11 +47,6 @@ const socialLinks = [
     label: 'GitHub',
     href: 'https://github.com/BrianSun-UBC',
     icon: GitBranch,
-  },
-  {
-    label: 'Email',
-    href: 'mailto:briansun@alumni.ubc.ca',
-    icon: Mail,
   },
 ];
 
@@ -337,8 +334,8 @@ export default function Home() {
           <a href="#projects">Projects</a>
           <a href="#writing">Writing</a>
         </nav>
-        <a className="mobile-contact" href="mailto:briansun@alumni.ubc.ca">
-          Let&apos;s talk
+        <a className="mobile-contact" href="#contact">
+          Contact
         </a>
       </div>
 
@@ -381,13 +378,26 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <p className="intro">
-            I lead enterprise Azure, Copilot, and API products from the first
-            ambiguous conversation to production adoption. My work blends{' '}
-            <span>hands-on engineering</span>, solution architecture, and the
-            calm, high-agency leadership required to make complex systems
-            useful.
-          </p>
+          <div className="intro">
+            <p>
+              I’m currently a Staff Solutions Engineer with 6+ years of
+              experience turning complex AI, cloud, and API challenges into
+              scalable solutions and measurable business outcomes.
+            </p>
+            <p>
+              At Microsoft, I lead enterprise initiatives across Azure AI,
+              Enterprise Copilot, Fabric, and GitHub Copilot, supporting a $40M+
+              portfolio and serving more than 5M+ monthly users. My work has
+              helped reduce client time-to-value by 40% and accelerate
+              production launches by 35%.
+            </p>
+            <p>
+              Previously, I led Solutions Engineering at VoPay, contributing to
+              $5M in year-over-year growth, and co-founded an ecommerce
+              analytics platform that scaled beyond $2M in ARR before being
+              acquired.
+            </p>
+          </div>
           <div className="impact-strip" aria-label="Career highlights">
             <div>
               <strong>6+</strong>
@@ -398,8 +408,8 @@ export default function Home() {
               <span>portfolio supported</span>
             </div>
             <div>
-              <strong>10K+</strong>
-              <span>user environments</span>
+              <strong>5M+</strong>
+              <span>monthly users</span>
             </div>
             <div>
               <strong>99.2%</strong>
@@ -436,8 +446,14 @@ export default function Home() {
         <section className="section" id="education">
           <SectionTitle number="02">Education &amp; toolkit</SectionTitle>
           <article className="education-card">
-            <div className="school-mark" aria-hidden="true">
-              UBC
+            <div className="school-mark">
+              <Image
+                src="/ubc-logo.png"
+                alt="University of British Columbia"
+                width={100}
+                height={100}
+                unoptimized
+              />
             </div>
             <div>
               <div className="entry-heading">
@@ -558,11 +574,7 @@ export default function Home() {
             forward-deployed engineering, product architecture, and the work of
             moving prototypes into production.
           </p>
-          <div className="contact-actions">
-            <a className="primary-action" href="mailto:briansun@alumni.ubc.ca">
-              <Mail aria-hidden="true" /> Email Brian
-            </a>
-          </div>
+          <ContactComposer />
         </section>
 
         <footer>
