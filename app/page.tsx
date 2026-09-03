@@ -28,6 +28,26 @@ function GitHubIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+function BrandMark() {
+  return (
+    <svg
+      className="brand-mark"
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        className="brand-mark-body"
+        fillRule="evenodd"
+        d="M7 4h10.1c4.1 0 6.8 2.5 6.8 6.1 0 2.4-1.2 4.2-3.3 5.2 2.6.9 4.1 3 4.1 5.8 0 4.1-3.1 6.9-7.6 6.9H7V4Zm5.2 4.2v5.1h4.2c1.6 0 2.5-.9 2.5-2.6 0-1.6-.9-2.5-2.5-2.5h-4.2Zm0 9.1v6.5h4.6c1.8 0 2.8-1.2 2.8-3.3 0-2-1-3.2-2.8-3.2h-4.6Z"
+      />
+      <path className="brand-mark-trace" d="M9.6 15.3h11.2" />
+      <circle className="brand-mark-node" cx="9.4" cy="15.3" r="1.15" />
+      <circle className="brand-mark-node" cx="21" cy="15.3" r="1.15" />
+    </svg>
+  );
+}
+
 type Experience = {
   company: string;
   location: string;
@@ -302,7 +322,7 @@ export default function Home() {
     <main className="site-shell">
       <aside className="rail" aria-label="Section navigation">
         <a className="monogram" href="#top" aria-label="Brian Sun, back to top">
-          BS
+          <BrandMark />
         </a>
         <nav>
           <a
@@ -333,7 +353,7 @@ export default function Home() {
 
       <div className="mobile-bar">
         <a className="monogram" href="#top" aria-label="Brian Sun, back to top">
-          BS
+          <BrandMark />
         </a>
         <nav aria-label="Mobile navigation">
           <a href="#experience">Work</a>
