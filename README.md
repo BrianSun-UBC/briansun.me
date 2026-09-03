@@ -1,6 +1,6 @@
 # briansun.me
 
-Personal portfolio for Brian Sun, built as a static Vinext/React site and deployed through GitHub Pages.
+Personal portfolio and website, built as a static Vinext/React site and deployed through GitHub Pages.
 
 ## Local development
 
