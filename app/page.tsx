@@ -4,7 +4,6 @@ import {
   BriefcaseBusiness,
   Code2,
   Contact,
-  Download,
   FileText,
   GitBranch,
   GraduationCap,
@@ -13,6 +12,22 @@ import {
   Sparkles,
 } from 'lucide-react';
 import Image from 'next/image';
+
+type Experience = {
+  company: string;
+  location: string;
+  role: string;
+  period?: string;
+  mark?: 'microsoft';
+  logo?: {
+    src: string;
+    alt: string;
+    className: string;
+    width: number;
+    height: number;
+  };
+  bullets?: string[];
+};
 
 const socialLinks = [
   {
@@ -38,7 +53,7 @@ const socialLinks = [
   },
 ];
 
-const experiences = [
+const experiences: Experience[] = [
   {
     company: 'Microsoft',
     location: 'Vancouver, BC',
@@ -58,7 +73,13 @@ const experiences = [
     location: 'Vancouver, BC',
     role: 'Lead Solutions Engineer — Payments and Cloud',
     period: 'Feb 2023 — Feb 2024',
-    mark: 'VP',
+    logo: {
+      src: '/vopay-logo.png',
+      alt: 'VoPay',
+      className: 'vopay-logo',
+      width: 200,
+      height: 200,
+    },
     bullets: [
       'Led discovery with 70+ monthly prospects, turning payment challenges into Python-based prototypes and tailored workflows that increased conversion by 60% and reduced sales cycles from 120 to 75 days.',
       'Built Python and API integration workflows that automated troubleshooting, halving post-sales implementation time and reducing support tickets by 40%.',
@@ -71,12 +92,33 @@ const experiences = [
     location: 'Vancouver, BC',
     role: 'Technical Co-Founder & CTO',
     period: 'Mar 2020 — Feb 2023',
-    mark: 'TR',
+    logo: {
+      src: '/transcend-logo.png',
+      alt: 'Transcend',
+      className: 'transcend-logo',
+      width: 200,
+      height: 200,
+    },
     bullets: [
       'Co-founded and built a Python-based product and analytics platform for 200+ ecommerce clients, owning product strategy, system architecture, and production delivery from zero to scale.',
       'Developed product-recommendation, ad-spend-optimization, and product-research solutions that increased revenue by 85%, deal sizes by 60%, retention by 50%, and engagement by 300%.',
       'Led and mentored an offshore engineering team while scaling annual recurring revenue past $2M at 170% year-over-year growth; the company and platform were ultimately acquired by a leading ecommerce competitor.',
     ],
+  },
+];
+
+const internships: Experience[] = [
+  {
+    company: 'University of British Columbia',
+    location: 'Vancouver, BC',
+    role: 'Research Assistant',
+    logo: {
+      src: '/ubc-logo.png',
+      alt: 'University of British Columbia',
+      className: 'ubc-logo',
+      width: 100,
+      height: 100,
+    },
   },
 ];
 
@@ -209,6 +251,49 @@ function SectionTitle({
   );
 }
 
+function ExperienceCard({ experience }: { experience: Experience }) {
+  return (
+    <article className="experience-card">
+      {experience.mark === 'microsoft' ? (
+        <div className="company-mark microsoft" aria-label="Microsoft">
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
+      ) : experience.logo ? (
+        <div className={`company-mark logo-mark ${experience.logo.className}`}>
+          <Image
+            src={experience.logo.src}
+            alt={experience.logo.alt}
+            width={experience.logo.width}
+            height={experience.logo.height}
+            unoptimized
+          />
+        </div>
+      ) : null}
+      <div className="entry-copy">
+        <div className="entry-heading">
+          <div>
+            <h3>{experience.role}</h3>
+            <p>
+              {experience.company} · {experience.location}
+            </p>
+          </div>
+          {experience.period ? <time>{experience.period}</time> : null}
+        </div>
+        {experience.bullets?.length ? (
+          <ul>
+            {experience.bullets.map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
+    </article>
+  );
+}
+
 export default function Home() {
   return (
     <main className="site-shell">
@@ -329,42 +414,19 @@ export default function Home() {
           <SectionTitle number="01">Experience</SectionTitle>
           <div className="experience-list">
             {experiences.map((experience) => (
-              <article className="experience-card" key={experience.company}>
-                {experience.mark === 'microsoft' ? (
-                  <div
-                    className="company-mark microsoft"
-                    aria-label="Microsoft"
-                  >
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                ) : (
-                  <div
-                    className={`company-mark letter-mark ${experience.company.toLowerCase()}`}
-                    aria-hidden="true"
-                  >
-                    {experience.mark}
-                  </div>
-                )}
-                <div className="entry-copy">
-                  <div className="entry-heading">
-                    <div>
-                      <h3>{experience.role}</h3>
-                      <p>
-                        {experience.company} · {experience.location}
-                      </p>
-                    </div>
-                    <time>{experience.period}</time>
-                  </div>
-                  <ul>
-                    {experience.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
+              <ExperienceCard
+                experience={experience}
+                key={experience.company}
+              />
+            ))}
+          </div>
+          <h3 className="subsection-label">Internship</h3>
+          <div className="experience-list internship-list">
+            {internships.map((experience) => (
+              <ExperienceCard
+                experience={experience}
+                key={experience.company}
+              />
             ))}
           </div>
         </section>
@@ -500,13 +562,6 @@ export default function Home() {
             <a className="primary-action" href="mailto:briansun@alumni.ubc.ca">
               <Mail aria-hidden="true" /> Email Brian
             </a>
-            <a
-              className="secondary-action"
-              href="/Brian-Sun-Resume.pdf"
-              download="Brian-Sun-Resume.pdf"
-            >
-              <Download aria-hidden="true" /> Download résumé
-            </a>
           </div>
         </section>
 
@@ -514,7 +569,6 @@ export default function Home() {
           <a className="footer-brand" href="#top">
             Brian Sun
           </a>
-          <p>Engineering useful AI systems from Vancouver.</p>
           <div>
             <a
               href="https://www.linkedin.com/in/brian--sun/"

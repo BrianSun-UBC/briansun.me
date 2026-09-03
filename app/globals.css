@@ -318,7 +318,7 @@ h1 {
 }
 .experience-card {
   display: grid;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: 96px 1fr;
   gap: 17px;
   padding: 5px 0 5px 17px;
   border-left: 2px solid transparent;
@@ -337,6 +337,7 @@ h1 {
   border: 1px solid var(--border);
   border-radius: 11px;
   background: var(--card);
+  justify-self: center;
 }
 .company-mark span:nth-child(1) {
   background: #f25022;
@@ -350,21 +351,54 @@ h1 {
 .company-mark span:nth-child(4) {
   background: #ffb900;
 }
-.company-mark.letter-mark {
-  display: grid;
-  place-items: center;
+.company-mark.logo-mark {
+  position: relative;
+  display: block;
+  overflow: hidden;
   padding: 0;
-  color: #d8e7ff;
-  font: 700 10px/1 var(--font-geist-mono);
-  letter-spacing: 0.04em;
+  background: #000;
 }
-.company-mark.vopay {
-  background: linear-gradient(145deg, #152c50, #0d1d36);
-  color: #74b9ff;
+.company-mark.logo-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.company-mark.transcend {
-  background: linear-gradient(145deg, #263365, #101c3e);
-  color: #9eb8ff;
+.company-mark.vopay-logo {
+  width: 38px;
+  height: 38px;
+}
+.company-mark.vopay-logo img {
+  transform: scale(1.6);
+}
+.company-mark.transcend-logo {
+  width: 96px;
+  height: 38px;
+}
+.company-mark.ubc-logo {
+  width: 48px;
+  height: 48px;
+  border-color: #294668;
+  background: #0c2343;
+}
+.company-mark.ubc-logo img {
+  object-fit: contain;
+}
+.subsection-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 36px 0 22px;
+  color: #6fa4f7;
+  font: 600 11px/1 var(--font-geist-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.subsection-label::after {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  content: '';
 }
 .entry-heading {
   display: flex;
@@ -694,22 +728,9 @@ a.project-card:focus-visible {
   transform: translateY(-2px);
   outline: none;
 }
-.secondary-action {
-  border: 1px solid #31517e;
-  background: rgb(9 20 37 / 55%);
-  color: #b8cbea;
-}
-.secondary-action:hover,
-.secondary-action:focus-visible {
-  border-color: #4b75ad;
-  color: #fff;
-  transform: translateY(-2px);
-  outline: none;
-}
-
 footer {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 18px;
   margin-top: 36px;
@@ -720,11 +741,9 @@ footer {
   color: #8eb6f7;
   font-weight: 700;
 }
-footer p {
-  margin: 0;
-}
 footer div {
   display: flex;
+  justify-content: flex-end;
   gap: 14px;
 }
 footer div a:hover,
@@ -829,6 +848,9 @@ footer div a:focus-visible {
   .experience-card {
     grid-template-columns: 1fr;
     padding-left: 13px;
+  }
+  .company-mark {
+    justify-self: start;
   }
   .education-card {
     grid-template-columns: 1fr;
