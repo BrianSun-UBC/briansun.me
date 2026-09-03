@@ -651,9 +651,6 @@ export default function Home() {
         <div className="soft-divider" />
 
         <section className="contact-card" id="contact">
-          <p className="card-eyebrow">
-            Feel free to reach out and send me a message
-          </p>
           <h2>Let&apos;s connect</h2>
           <p>
             I&apos;m always happy to connect with other like-minded
