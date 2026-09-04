@@ -1,15 +1,7 @@
 'use client';
 
-import { useRef, useState } from 'react';
-import { ArrowUp, Mail } from 'lucide-react';
-
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog';
+import { useLayoutEffect, useRef, useState } from 'react';
+import { ArrowUp, Mail, X } from 'lucide-react';
 
 const emailAddress = 'briansun@alumni.ubc.ca';
 const subject = 'Message from briansun.me';
@@ -18,6 +10,15 @@ export function ContactComposer() {
   const [message, setMessage] = useState('');
   const [chooserOpen, setChooserOpen] = useState(false);
   const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  useLayoutEffect(() => {
+    const messageField = messageRef.current;
+
+    if (!messageField) return;
+
+    messageField.style.height = 'auto';
+    messageField.style.height = `${messageField.scrollHeight}px`;
+  }, [message]);
 
   function showSendOptions() {
     if (!message.trim()) {
@@ -44,7 +45,7 @@ export function ContactComposer() {
   }
 
   return (
-    <>
+    <div className="contact-composer-shell">
       <div className="contact-actions">
         <button
           className="primary-action"
@@ -54,6 +55,40 @@ export function ContactComposer() {
           <Mail aria-hidden="true" /> Contact
         </button>
       </div>
+
+      {chooserOpen ? (
+        <dialog
+          open
+          className="send-panel"
+          id="send-options"
+          aria-labelledby="send-options-title"
+          onKeyDown={(event) => {
+            if (event.key === 'Escape') setChooserOpen(false);
+          }}
+        >
+          <div className="send-panel-heading">
+            <h3 id="send-options-title">Where do you want to send this?</h3>
+            <button
+              className="send-panel-close"
+              type="button"
+              aria-label="Close send options"
+              onClick={() => setChooserOpen(false)}
+            >
+              <X aria-hidden="true" />
+            </button>
+          </div>
+          <div className="send-options">
+            <button type="button" onClick={() => sendWith('gmail')}>
+              <span className="option-dot" aria-hidden="true" />
+              Gmail web client
+            </button>
+            <button type="button" onClick={() => sendWith('default')}>
+              <span className="option-dot" aria-hidden="true" />
+              Default mail app
+            </button>
+          </div>
+        </dialog>
+      ) : null}
 
       <form
         className="message-composer"
@@ -78,34 +113,14 @@ export function ContactComposer() {
           className="composer-send"
           type="submit"
           aria-label="Choose how to send this message"
+          aria-controls="send-options"
+          aria-expanded={chooserOpen}
           disabled={!message.trim()}
         >
           <ArrowUp aria-hidden="true" />
         </button>
       </form>
       <p className="composer-hint">Feel free to send me a message.</p>
-
-      <Dialog open={chooserOpen} onOpenChange={setChooserOpen}>
-        <DialogContent className="send-dialog">
-          <DialogHeader>
-            <DialogTitle>Where do you want to send this?</DialogTitle>
-            <DialogDescription className="sr-only">
-              Choose Gmail in your browser or your device&apos;s default mail
-              application.
-            </DialogDescription>
-          </DialogHeader>
-          <div className="send-options">
-            <button type="button" onClick={() => sendWith('gmail')}>
-              <span className="option-dot" aria-hidden="true" />
-              Gmail web client
-            </button>
-            <button type="button" onClick={() => sendWith('default')}>
-              <span className="option-dot" aria-hidden="true" />
-              Default mail app
-            </button>
-          </div>
-        </DialogContent>
-      </Dialog>
-    </>
+    </div>
   );
 }
