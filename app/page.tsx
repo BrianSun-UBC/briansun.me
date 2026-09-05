@@ -92,8 +92,8 @@ const experiences: Experience[] = [
     mark: 'microsoft',
     bullets: [
       <>
-        Own <strong>end-to-end delivery</strong> for Azure, Copilot, Foundry,
-        Fabric &amp; GitHub products, translating ambiguous enterprise workflows
+        Own <strong>end-to-end delivery</strong> across enterprise Azure, Copilot
+        and GitHub products, translating ambiguous enterprise workflows
         into scoped solutions, clear architecture, and rollout plans from
         discovery through production adoption
       </>,
@@ -470,8 +470,8 @@ export default function Home() {
               scalable solutions and measurable business outcomes.
             </p>
             <p>
-              At Microsoft, I lead enterprise initiatives across Azure AI,
-              Enterprise Copilot, Fabric, and GitHub Copilot, supporting a $40M+
+              At Microsoft, I lead initiatives across enterprise Azure, Copilot
+              and GitHub products, supporting a $40M+
               portfolio and serving more than 5M+ monthly users. My work has
               helped reduce client time-to-value by 40% and accelerate
               production launches by 35%.
