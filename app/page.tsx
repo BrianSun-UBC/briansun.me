@@ -52,6 +52,7 @@ type Experience = {
   company: string;
   location: string;
   role: string;
+  detail?: string;
   period?: string;
   mark?: 'microsoft';
   logo?: {
@@ -215,6 +216,8 @@ const internships: Experience[] = [
     company: 'University of British Columbia',
     location: 'Vancouver, BC',
     role: 'Research Assistant',
+    detail:
+      'For Human-Computer Interaction (HCI) Lab on personalized explainable AI',
     period: 'Jan 2017 — Jan 2019',
     logo: {
       src: '/ubc-logo.png',
@@ -223,9 +226,6 @@ const internships: Experience[] = [
       width: 100,
       height: 100,
     },
-    bullets: [
-      '(For Human-Computer Interaction (HCI) Lab on personalized explainable AI)',
-    ],
   },
 ];
 
@@ -380,6 +380,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
         <div className="entry-heading">
           <div>
             <h3>{experience.role}</h3>
+            {experience.detail ? <p>{experience.detail}</p> : null}
             <p>
               {experience.company} · {experience.location}
             </p>
