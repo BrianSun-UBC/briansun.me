@@ -92,8 +92,8 @@ const experiences: Experience[] = [
     mark: 'microsoft',
     bullets: [
       <>
-        Own <strong>end-to-end delivery</strong> across enterprise Azure, Copilot
-        and GitHub products, translating ambiguous enterprise workflows
+        Own <strong>end-to-end delivery</strong> across enterprise Azure,
+        Copilot and GitHub products, translating ambiguous enterprise workflows
         into scoped solutions, clear architecture, and rollout plans from
         discovery through production adoption
       </>,
@@ -223,6 +223,9 @@ const internships: Experience[] = [
       width: 100,
       height: 100,
     },
+    bullets: [
+      '(For Human-Computer Interaction (HCI) Lab on personalized explainable AI)',
+    ],
   },
 ];
 
@@ -471,10 +474,9 @@ export default function Home() {
             </p>
             <p>
               At Microsoft, I lead initiatives across enterprise Azure, Copilot
-              and GitHub products, supporting a $40M+
-              portfolio and serving more than 5M+ monthly users. My work has
-              helped reduce client time-to-value by 40% and accelerate
-              production launches by 35%.
+              and GitHub products, supporting a $40M+ portfolio and serving more
+              than 5M+ monthly users. My work has helped reduce client
+              time-to-value by 40% and accelerate production launches by 35%.
             </p>
             <p>
               Previously, I led Solutions Engineering at VoPay, contributing to
