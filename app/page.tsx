@@ -73,7 +73,7 @@ const socialLinks = [
   },
   {
     label: 'Resume',
-    href: '/Brian-Sun-Resume-2026.pdf',
+    href: '/Brian-Sun-Resume-2026-09.pdf',
     icon: FileText,
     download: true,
   },
