@@ -203,7 +203,7 @@ const experiences: Experience[] = [
       </>,
       <>
         Led and mentored offshore engineering team while scaling{' '}
-        <strong>ARR past $2M at 170% YoY growth</strong>; the company and
+        <strong>ARR past $1M at 170% YoY growth</strong>; the company and
         platform was ultimately acquired in a sale to a leading competitor in
         the ecommerce space.
       </>,
