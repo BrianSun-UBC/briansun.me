@@ -217,7 +217,7 @@ const internships: Experience[] = [
     location: 'Vancouver, BC',
     role: 'Research Assistant',
     detail:
-      'For Human-Computer Interaction (HCI) Lab on personalized explainable AI',
+      'At Human-Computer Interaction (HCI) Lab on personalized explainable AI',
     period: 'Jan 2017 — Jan 2019',
     logo: {
       src: '/ubc-logo.png',
