@@ -482,7 +482,7 @@ export default function Home() {
             <p>
               Previously, I led Solutions Engineering at VoPay, contributing to
               $5M in year-over-year growth, and co-founded an ecommerce
-              analytics platform that scaled beyond $2M in ARR before being
+              analytics platform that scaled beyond $1M in ARR before being
               acquired.
             </p>
           </div>
