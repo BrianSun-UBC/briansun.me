@@ -73,7 +73,7 @@ const socialLinks = [
   },
   {
     label: 'Resume',
-    href: '/Brian-Sun-Resume-2026-09.pdf',
+    href: '/Brian-Sun-Resume-2026-09-17.pdf',
     icon: FileText,
     download: true,
   },
@@ -93,15 +93,15 @@ const experiences: Experience[] = [
     mark: 'microsoft',
     bullets: [
       <>
-        Own <strong>end-to-end delivery</strong> across enterprise Azure,
-        Copilot and GitHub products, translating ambiguous enterprise workflows
+        Own <strong>end-to-end delivery</strong> for Azure, Copilot, Foundry,
+        Fabric &amp; GitHub products, translating complex enterprise workflows
         into scoped solutions, clear architecture, and rollout plans from
         discovery through production adoption
       </>,
       <>
         Personally <strong>write and review production-grade code</strong> for
         full-stack AI prototypes, microservices, evaluation harness and
-        integrations; debug agent and workflow failures and harden successful
+        integrations; debug agent and workflow failures and run successful
         pilots for production, shortening <strong>sales cycles by 27%</strong>{' '}
         and <strong>increasing deal closure rates by 33%</strong>
       </>,
@@ -116,7 +116,7 @@ const experiences: Experience[] = [
         Partner across sales, engineering, product, security and customer
         success teams to communicate technical tradeoffs, delivery blockers and
         guide production rollouts;{' '}
-        <strong>Lead a team of 12 solution engineers</strong>, contributing to{' '}
+        <strong>Team lead for 10 solution engineers</strong>, contributing to{' '}
         <strong>SMB and Enterprise deal growth of 24%</strong> and{' '}
         <strong>98% positive customer feedback</strong>
       </>,
@@ -237,21 +237,20 @@ const skillGroups = [
       'LangChain/Graph',
       'AutoGen',
       'Semantic Kernel',
-      'Prompt Engineering',
+      'Model Context Protocol',
     ],
   },
   {
     title: 'AI Engineering',
     skills: [
       'Python',
-      'Javascript',
+      'Typescript',
+      'FastAPI',
       'RAG',
       'Embeddings',
       'Vector Databases',
-      'APIs',
       'SQL',
-      'GraphQL',
-      'Postgres',
+      'PostgreSQL',
       'Microservices',
     ],
   },
@@ -261,22 +260,21 @@ const skillGroups = [
       'Azure',
       'AWS',
       'GCP',
-      'AKS',
+      'Docker',
+      'Kubernetes (AKS)',
       'CI/CD',
-      'Deployment',
       'Evaluation',
       'Monitoring',
-      'Security',
-      'Governance',
+      'Debugging',
     ],
   },
   {
-    title: 'Forward-Deployed Leadership',
+    title: 'Forward-Deployed Engineering',
     skills: [
-      'Technical Discovery',
-      'Rapid Prototyping',
-      'Enterprise Integrations',
-      'Stakeholder Alignment',
+      'Agent Orchestration',
+      'Workflow Automation',
+      'State & Memory Management',
+      'Security',
     ],
   },
 ];
