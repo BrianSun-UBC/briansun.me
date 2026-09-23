@@ -310,7 +310,8 @@ h1 {
 }
 .volunteer-summary {
   margin-top: 32px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.55;
 }
 .experience-card {
   display: grid;
