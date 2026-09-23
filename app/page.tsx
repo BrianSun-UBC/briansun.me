@@ -622,11 +622,14 @@ export default function Home() {
               <ExperienceCard experience={experience} key={experience.company} />
             ))}
           </div>
-          <p className="volunteer-summary">
+          <div className="volunteer-summary entry-heading">
+            <div>
             <strong>1,500+ total volunteer hours</strong> across Richmond Cares,
             Richmond Centre for Disability, Vancouver General Hospital, and
-            Richmond Hospital <span>(2015–2020)</span>.
-          </p>
+            Richmond Hospital.
+            </div>
+            <time>2015 — 2020</time>
+          </div>
         </section>
 
         <div className="soft-divider" />
