@@ -232,18 +232,19 @@ const internships: Experience[] = [
 
 const leadership: Experience[] = [
   {
-    company: 'Richmond Centre for Disability',
-    location: 'Richmond, BC',
-    role: 'Staff Planner & Coordinator',
-    period: '2016',
+    company: 'Cadets Canada',
+    logo: { src: '/cadets-canada-logo.svg', alt: 'Cadets Canada', className: 'volunteer-logo cadets-logo', width: 100, height: 100 },
+    location: 'RCSCC Bicknell',
+    role: 'Chief Petty Officer Cadet, 1st Class',
+    period: '2010 — 2015',
     bullets: [
-      <><strong>Led planning for the summer program</strong> for children with disabilities.</>,
-      <><strong>Coordinated staff and daily activities</strong> to deliver an inclusive, engaging summer program for children with disabilities.</>,
-      <><strong>Adapted program activities to participants’ needs</strong>, helping children take part, build confidence, and connect with peers.</>,
+      <><strong>Led training and welfare for a company of about 100 cadets.</strong> Managed platoon sergeants and staff at a regional military training base for cadets. Promoted from Ordinary Cadet (OC) to Chief Petty Officer Cadet, 1st Class (CPO1), the highest standard cadet rank.</>,
+      <><strong>Directed base-wide sports events for more than 1,000 cadets.</strong> Planned tournaments, refereed competitions, and coached cadets to lead, assess, and mentor others.</>,
     ],
   },
   {
     company: 'World Vision UBC',
+    logo: { src: '/world-vision-logo.png', alt: 'World Vision', className: 'volunteer-logo', width: 48, height: 48 },
     location: 'Vancouver, BC',
     role: 'President',
     period: '2016 — 2020',
@@ -256,13 +257,15 @@ const leadership: Experience[] = [
     ],
   },
   {
-    company: 'Cadets Canada',
-    location: 'RCSCC Bicknell',
-    role: 'Chief Petty Officer Cadet, 1st Class',
-    period: '2010 — 2015',
+    company: 'Richmond Centre for Disability',
+    logo: { src: '/rcd-logo.png', alt: 'Richmond Centre for Disability', className: 'volunteer-logo', width: 498, height: 889 },
+    location: 'Richmond, BC',
+    role: 'Staff Planner & Coordinator',
+    period: '2016',
     bullets: [
-      <><strong>Led training and welfare for a company of about 100 cadets.</strong> Managed platoon sergeants and staff at a regional military training base for cadets. Promoted from Ordinary Cadet (OC) to Chief Petty Officer Cadet, 1st Class (CPO1), the highest standard cadet rank.</>,
-      <><strong>Directed base-wide sports events for more than 1,000 cadets.</strong> Planned tournaments, refereed competitions, and coached cadets to lead, assess, and mentor others.</>,
+      <><strong>Led planning for the summer program</strong> for children with disabilities.</>,
+      <><strong>Coordinated staff and daily activities</strong> to deliver an inclusive, engaging summer program for children with disabilities.</>,
+      <><strong>Adapted program activities to participants’ needs</strong>, helping children take part, build confidence, and connect with peers.</>,
     ],
   },
 ];

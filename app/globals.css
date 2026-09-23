@@ -319,9 +319,6 @@ h1 {
 .experience-card:hover {
   border-left-color: #4f8cff;
 }
-.leadership-section .experience-card {
-  grid-template-columns: minmax(0, 1fr);
-}
 .company-mark {
   width: 38px;
   height: 38px;
@@ -358,6 +355,18 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.company-mark.volunteer-logo {
+  width: 48px;
+  height: 48px;
+  padding: 4px;
+  background: #102a43;
+}
+.company-mark.volunteer-logo img {
+  object-fit: contain;
+}
+.company-mark.cadets-logo {
+  background: #fff;
 }
 .company-mark.vopay-logo {
   width: 38px;
