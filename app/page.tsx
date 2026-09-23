@@ -238,7 +238,8 @@ const leadership: Experience[] = [
     role: 'Chief Petty Officer Cadet, 1st Class',
     period: '2010 — 2015',
     bullets: [
-      <><strong>Led training and welfare for a company of about 100 cadets.</strong> Managed platoon sergeants and staff at a regional military training base for cadets. Promoted from Ordinary Cadet (OC) to Chief Petty Officer Cadet, 1st Class (CPO1), the highest standard cadet rank.</>,
+      <><strong>Led training and welfare for a company of about 100 cadets.</strong> Managed platoon sergeants and staff at a regional military training base for cadets.</>,
+      <><strong>Promoted from Ordinary Cadet (OC) to Chief Petty Officer Cadet, 1st Class (CPO1)</strong>, the highest standard cadet rank.</>,
       <><strong>Directed base-wide sports events for more than 1,000 cadets.</strong> Planned tournaments, refereed competitions, and coached cadets to lead, assess, and mentor others.</>,
     ],
   },
