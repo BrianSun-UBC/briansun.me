@@ -5,6 +5,7 @@ import {
   Code2,
   FileText,
   GraduationCap,
+  HeartHandshake,
   Mail,
   Sparkles,
 } from 'lucide-react';
@@ -229,6 +230,43 @@ const internships: Experience[] = [
   },
 ];
 
+const leadership: Experience[] = [
+  {
+    company: 'Richmond Centre for Disability',
+    location: 'Richmond, BC',
+    role: 'Staff Planner & Coordinator',
+    period: '2016',
+    bullets: [
+      <><strong>Led planning for the summer program</strong> for children with disabilities.</>,
+      <><strong>Coordinated staff and daily activities</strong> to deliver an inclusive, engaging summer program for children with disabilities.</>,
+      <><strong>Adapted program activities to participants’ needs</strong>, helping children take part, build confidence, and connect with peers.</>,
+    ],
+  },
+  {
+    company: 'World Vision UBC',
+    location: 'Vancouver, BC',
+    role: 'President',
+    period: '2016 — 2020',
+    bullets: [
+      <><strong>Advanced through four leadership roles</strong>: Events Coordinator, Events Director, VP Events, and President.</>,
+      <><strong>Led a team of 30 events and marketing coordinators</strong> as Events Director and VP Events.</>,
+      <><strong>Partnered with World Vision’s main organization</strong> as its UBC branch to plan 15+ large-scale charity events throughout the school year, collectively fundraising <strong>over $3M</strong>.</>,
+      <><strong>Expanded the team and scale of events as President</strong>, growing charity impact from $1.5M to over $3M.</>,
+      <><strong>Earned Excellence Awards and Best UBC Club recognition in 2019</strong> for the team’s accomplishments.</>,
+    ],
+  },
+  {
+    company: 'Cadets Canada',
+    location: 'RCSCC Bicknell',
+    role: 'Chief Petty Officer Cadet, 1st Class',
+    period: '2010 — 2015',
+    bullets: [
+      <><strong>Led training and welfare for a company of about 100 cadets.</strong> Managed platoon sergeants and staff at a regional military training base for cadets. Promoted from Ordinary Cadet (OC) to Chief Petty Officer Cadet, 1st Class (CPO1), the highest standard cadet rank.</>,
+      <><strong>Directed base-wide sports events for more than 1,000 cadets.</strong> Planned tournaments, refereed competitions, and coached cadets to lead, assess, and mentor others.</>,
+    ],
+  },
+];
+
 const skillGroups = [
   {
     title: 'Agentic AI & Generative AI',
@@ -419,6 +457,9 @@ export default function Home() {
           >
             <GraduationCap aria-hidden="true" />
           </a>
+          <a href="#leadership" aria-label="Leadership and volunteering" data-tooltip="Leadership & Volunteering">
+            <HeartHandshake aria-hidden="true" />
+          </a>
           <a href="#projects" aria-label="Projects" data-tooltip="Projects">
             <Sparkles aria-hidden="true" />
           </a>
@@ -564,6 +605,22 @@ export default function Home() {
                   ))}
                 </div>
               </article>
+            ))}
+          </div>
+        </section>
+
+        <div className="soft-divider" />
+
+        <section className="section leadership-section" id="leadership">
+          <SectionTitle>Leadership &amp; Volunteering</SectionTitle>
+          <p className="section-intro">
+            <strong>1,500+ total volunteer hours</strong> across Richmond Cares,
+            Richmond Centre for Disability, Vancouver General Hospital, and
+            Richmond Hospital.
+          </p>
+          <div className="experience-list">
+            {leadership.map((experience) => (
+              <ExperienceCard experience={experience} key={experience.company} />
             ))}
           </div>
         </section>

@@ -319,6 +319,9 @@ h1 {
 .experience-card:hover {
   border-left-color: #4f8cff;
 }
+.leadership-section .experience-card {
+  grid-template-columns: minmax(0, 1fr);
+}
 .company-mark {
   width: 38px;
   height: 38px;
