@@ -233,7 +233,7 @@ const internships: Experience[] = [
 const leadership: Experience[] = [
   {
     company: 'Cadets Canada',
-    logo: { src: '/cadets-canada-logo.svg', alt: 'Cadets Canada', className: 'volunteer-logo cadets-logo', width: 100, height: 100 },
+    logo: { src: '/cadets-canada-black.png', alt: 'Cadets Canada', className: 'volunteer-logo cadets-logo', width: 1896, height: 894 },
     location: 'RCSCC Bicknell',
     role: 'Chief Petty Officer Cadet, 1st Class',
     period: '2010 — 2015',
