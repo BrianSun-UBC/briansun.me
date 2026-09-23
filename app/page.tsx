@@ -263,9 +263,9 @@ const leadership: Experience[] = [
     role: 'Staff Planner & Coordinator',
     period: '2016',
     bullets: [
-      <><strong>Led planning for the summer program</strong> for children with disabilities.</>,
-      <><strong>Coordinated staff and daily activities</strong> to deliver an inclusive, engaging summer program for children with disabilities.</>,
-      <><strong>Adapted program activities to participants’ needs</strong>, helping children take part, build confidence, and connect with peers.</>,
+      <><strong>Led a team of 22 staff</strong> in planning the summer camp program for children with disabilities.</>,
+      <><strong>Negotiated sponsorships and organized large-scale activities</strong> on a weekly basis for the summer camp.</>,
+      <><strong>Adapted program activities to each participant’s disability-related needs</strong>, ensuring everyone felt included, confident, and safe in all activities.</>,
     ],
   },
 ];
@@ -616,16 +616,16 @@ export default function Home() {
 
         <section className="section leadership-section" id="leadership">
           <SectionTitle>Leadership &amp; Volunteering</SectionTitle>
-          <p className="section-intro">
-            <strong>1,500+ total volunteer hours</strong> across Richmond Cares,
-            Richmond Centre for Disability, Vancouver General Hospital, and
-            Richmond Hospital.
-          </p>
           <div className="experience-list">
             {leadership.map((experience) => (
               <ExperienceCard experience={experience} key={experience.company} />
             ))}
           </div>
+          <p className="volunteer-summary">
+            <strong>1,500+ total volunteer hours</strong> across Richmond Cares,
+            Richmond Centre for Disability, Vancouver General Hospital, and
+            Richmond Hospital <span>(2015–2020)</span>.
+          </p>
         </section>
 
         <div className="soft-divider" />

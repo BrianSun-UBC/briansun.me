@@ -308,6 +308,10 @@ h1 {
   display: grid;
   gap: 38px;
 }
+.volunteer-summary {
+  margin-top: 32px;
+  line-height: 1.7;
+}
 .experience-card {
   display: grid;
   grid-template-columns: 54px 1fr;
