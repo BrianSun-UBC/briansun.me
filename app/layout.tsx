@@ -75,6 +75,37 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <script
+          id="statcounter"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.sc_project = 13357643;
+              window.sc_invisible = 1;
+              window.sc_security = "f4ef8931";
+              var counter = document.createElement("script");
+              counter.src = "https://www.statcounter.com/counter/counter.js";
+              counter.async = true;
+              document.body.appendChild(counter);
+            `,
+          }}
+        />
+        <noscript>
+          <div className="statcounter">
+            <a
+              title="Web Analytics Made Easy - Statcounter"
+              href="https://statcounter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="statcounter"
+                src="https://c.statcounter.com/13357643/0/f4ef8931/1/"
+                alt="Web Analytics Made Easy - Statcounter"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </a>
+          </div>
+        </noscript>
       </body>
     </html>
   );
