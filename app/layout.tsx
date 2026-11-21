@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://briansun.me'),
-  title: 'Brian Sun — Senior Solutions Engineer II (L64), Cloud & AI',
+  title: 'Brian Sun — Senior Solutions Engineer II, Cloud & AI',
   description:
-    'Brian Sun is a Senior Solutions Engineer II (L64), Cloud & AI at Microsoft building enterprise AI, cloud, and API products from discovery to production.',
+    'Brian Sun is a Senior Solutions Engineer II, Cloud & AI at Microsoft building enterprise AI, cloud, and API products from discovery to production.',
   alternates: {
     canonical: '/',
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   creator: 'Brian Sun',
   keywords: [
     'Brian Sun',
-    'Senior Solutions Engineer II (L64)',
+    'Senior Solutions Engineer II',
     'Azure AI',
     'Enterprise AI',
     'Cloud Architecture',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://briansun.me',
-    title: 'Brian Sun — Senior Solutions Engineer II (L64), Cloud & AI',
+    title: 'Brian Sun — Senior Solutions Engineer II, Cloud & AI',
     description: 'Enterprise AI from discovery to production.',
     siteName: 'Brian Sun',
     locale: 'en_CA',
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
         url: '/og-card.png',
         width: 1200,
         height: 630,
-        alt: 'Brian Sun — Senior Solutions Engineer II (L64), Cloud & AI',
+        alt: 'Brian Sun — Senior Solutions Engineer II, Cloud & AI',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Brian Sun — Senior Solutions Engineer II (L64), Cloud & AI',
+    title: 'Brian Sun — Senior Solutions Engineer II, Cloud & AI',
     description: 'Enterprise AI from discovery to production.',
     images: ['/og-card.png'],
   },
