@@ -89,7 +89,7 @@ const experiences: Experience[] = [
   {
     company: 'Microsoft',
     location: 'Vancouver, BC',
-    role: 'Senior Solutions Engineer II (L64), Cloud & AI',
+    role: 'Staff Solutions Engineer (L64), Cloud & AI',
     period: 'Feb 2024 — Present',
     mark: 'microsoft',
     bullets: [
@@ -494,7 +494,7 @@ export default function Home() {
         <header className="hero">
           <h1>Brian Sun</h1>
           <p className="hero-role">
-            Senior Solutions Engineer II, Cloud &amp; AI at Microsoft
+            Staff Solutions Engineer, Cloud &amp; AI at Microsoft
           </p>
           <div className="social-row" aria-label="Social links">
             {socialLinks.map(({ label, href, icon: Icon, download }) => (
@@ -512,7 +512,7 @@ export default function Home() {
           </div>
           <div className="intro">
             <p>
-              I’m currently a Senior Solutions Engineer II, Cloud &amp; AI with 6+ years of
+              I’m currently a Staff Solutions Engineer, Cloud &amp; AI with 6+ years of
               experience turning complex AI, cloud, and API challenges into
               scalable solutions and measurable business outcomes.
             </p>
